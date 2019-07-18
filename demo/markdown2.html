@@ -7,9 +7,9 @@
   <title>marked插件制作的markdown编辑器</title>
   <script src="../node_modules/marked/marked.min.js"></script>
   <script src="./js/highlight.min.js"></script>
-  <script src="./js/highlightjs-line-bunbers.min.js"></script>
+  <script src="./js/highlightjs-line-numbers.min.js"></script>
   <link rel="stylesheet" href="../node_modules/github-markdown-css/github-markdown.css">
-  <link rel="stylesheet" href="../node_modules/highlight.js/styles/default.css">
+  <link rel="stylesheet" href="../node_modules/highlight.js/styles/vs.css">
   <style>
     html,body {
       width: 100%;
@@ -40,7 +40,7 @@
 </head>
 <body>
   <div id="container" class="container">
-    <textarea name="" id="md-content" onkeyup="mdSwitch()" class="md-content markdown-edit"></textarea>
+    <textarea name="" id="md-content" oninput="mdSwitch()" class="md-content markdown-edit"></textarea>
     <div id="show-md" class="md-content md-show-content markdown-body"></div>
   </div>
 </body>
@@ -50,7 +50,6 @@ function mdSwitch() {
   var mdContent = document.getElementById('md-content');
   var showMd = document.getElementById('show-md');
   var mdValue = mdContent.value;
-  
   showMd.innerHTML = marked(mdValue);
   
   // 代码高亮
