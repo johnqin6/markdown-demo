@@ -2,4 +2,4 @@
 
 ## 效果图
 
-![效果图](../images/markdown.png)
+![效果](../images/markdown.png)
